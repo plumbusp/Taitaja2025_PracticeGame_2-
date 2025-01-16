@@ -44,11 +44,14 @@ TagManager:
   - name: Floor
     uniqueID: 3194034659
     locked: 0
-  - name: Behind character
-    uniqueID: 3675072959
-    locked: 0
   - name: Arms
     uniqueID: 1796460029
+    locked: 0
+  - name: Skirt
+    uniqueID: 1896576547
+    locked: 0
+  - name: Behind character
+    uniqueID: 3675072959
     locked: 0
   - name: Default
     uniqueID: 0

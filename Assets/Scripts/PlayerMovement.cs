@@ -15,7 +15,7 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        //animator = GetComponent<Animator>();
+        animator = GetComponent<Animator>();
     }
 
     void Update()
@@ -24,8 +24,8 @@ public class PlayerMovement : MonoBehaviour
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
 
-        //animator.SetFloat("x", movement.x);
-        //animator.SetFloat("y", movement.y);
+        animator.SetFloat("x", movement.x);
+        animator.SetFloat("y", movement.y);
 
         /*animator.SetFloat("Horizontal",movement.x);
 		animator.SetFloat("Vertical",movement.y);
