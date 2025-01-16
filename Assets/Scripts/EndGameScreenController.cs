@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class EndGameScreenManager : MonoBehaviour
+public class EndGameScreenController : MonoBehaviour
 {
     [SerializeField] private GameObject _deadScreen;
     [SerializeField] private GameObject _winScreen;

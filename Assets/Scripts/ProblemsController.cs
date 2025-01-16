@@ -6,7 +6,7 @@ using UnityEngine;
 public class ProblemsController : MonoBehaviour
 {
     // Makes problems active at some period of time 
-    [SerializeField] EndGameScreenManager _endGameScreenManager;
+    [SerializeField] EndGameScreenController _endGameScreenManager;
     [SerializeField] private float _waitTime;
     private float _timer = 0;
 

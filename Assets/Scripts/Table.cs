@@ -1,12 +1,8 @@
 using UnityEngine;
-using System;
-using UnityEngine.UI;
-using UnityEngine.InputSystem;
 
-public class Problem : MonoBehaviour
+public class Table : MonoBehaviour
 {
-    public event Action<Problem> OnFixed;
-    public event Action OnDied;
+    public event Action<Problem> OnPerformed;
 
     private GameControls _playerInputActions;
 
@@ -42,7 +38,8 @@ public class Problem : MonoBehaviour
 
 
     private bool _active = false;
-    public bool Active {
+    public bool Active
+    {
         get
         {
             return _active;
@@ -77,7 +74,7 @@ public class Problem : MonoBehaviour
         }
         set
         {
-            if(_isHolding)
+            if (_isHolding)
                 ResetHold();
 
             _holdCanBeShown = value;
@@ -129,14 +126,14 @@ public class Problem : MonoBehaviour
         {
             Active = false;
 
-            OnFixed?.Invoke(this);
+            OnPerformed?.Invoke(this);
         }
     }
     private void ResetHold()
     {
         _isHolding = false;
         _holdTimer = 0;
-        _fillCircle.fillAmount =0;
+        _fillCircle.fillAmount = 0;
     }
     private void HandleActiveTimer()
     {

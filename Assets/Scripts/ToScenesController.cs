@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class EndGameSceneController : MonoBehaviour
+public class ToScenesController : MonoBehaviour
 {
     public void Retry()
     {

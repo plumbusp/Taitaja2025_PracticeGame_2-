@@ -4,7 +4,7 @@ using UnityEngine;
 public class WinStateTimer : MonoBehaviour
 {
     [SerializeField] private float _secUntilWin = 10;
-    [SerializeField] private EndGameScreenManager _endGameScreenManager;
+    [SerializeField] private EndGameScreenController _endGameScreenManager;
     [SerializeField] private TMP_Text _timeText;
 
     void Update()
