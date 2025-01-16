@@ -6,22 +6,24 @@ using UnityEngine.InputSystem;
 public class Problem : MonoBehaviour
 {
     public event Action<Problem> OnFixed;
+    public event Action OnDied;
+
+    private GameControls _playerInputActions;
 
     // Have methods to be solved
     [Header("Hold")]
     [SerializeField] private float _holdDuration;
     [SerializeField] private Image _fillCircle;
-
-    private GameControls _playerInputActions;
-
     private float _holdTimer = 0;
     private bool _isHolding = false;
 
-    private bool _needToBeSolved = false;
+    [Header("Active state parameters")]
+    [SerializeField] private float _secondsUntilUrgent;
+    [SerializeField] private float _secondsUntilDie;
+    private float _waitTimer;
 
-    private bool _active = false;
 
-    [Header("Active \"in-code animation\" parameters")]
+    [Header(" \"In-code animation\" parameters")]
     [SerializeField] private Vector2 _initialWarningScale;
     [SerializeField] private Vector2 _urgentWarningScale;
 
@@ -34,7 +36,7 @@ public class Problem : MonoBehaviour
     private SpriteRenderer _spriteRen;
 
 
-
+    private bool _active = false;
     public bool Active {
         get
         {
@@ -47,10 +49,15 @@ public class Problem : MonoBehaviour
 
             _active = value;
 
-            if (_active)
+            if (_active) // If set to Active
+            {
                 _spriteRen.color = _initialWarningColor;
-            else
+            }
+            else // If set to Unactive
+            {
+                _waitTimer = 0;
                 _spriteRen.color = _initialColor;
+            }
         }
     }
 
@@ -70,6 +77,7 @@ public class Problem : MonoBehaviour
         }
     }
 
+
     public void Initlaize(GameControls playerInputActions)
     {
         _playerInputActions = playerInputActions;
@@ -87,20 +95,14 @@ public class Problem : MonoBehaviour
         if (!Active)
             return;
 
+        HandleActiveTimer();
+
+        //Hold
         if (!HoldCanBeShown)
             return;
 
         if (_isHolding)
-        {
-            _holdTimer += Time.deltaTime;
-            _fillCircle.fillAmount = _holdTimer/_holdDuration;
-            if(_holdTimer >= _holdDuration )
-            {
-                // To-DO: Fix problem
-                Debug.Log(" Problem " + gameObject.name + " fixed");
-                ResetHold();
-            }
-        }
+            HandleHoldingTimer();
     }
 
     private void OnHold(InputAction.CallbackContext context)
@@ -126,5 +128,29 @@ public class Problem : MonoBehaviour
         _isHolding = false;
         _holdTimer = 0;
         _fillCircle.fillAmount =0;
+    }
+    private void HandleActiveTimer()
+    {
+        _waitTimer += Time.deltaTime;
+        if (_waitTimer >= _secondsUntilUrgent)
+        {
+            _spriteRen.color = _urgentWarningColor;
+            if (_waitTimer >= _secondsUntilUrgent + _secondsUntilDie)
+            {
+                //Player Lost 
+                OnDied?.Invoke();
+            }
+        }
+    }
+    private void HandleHoldingTimer()
+    {
+        _holdTimer += Time.deltaTime;
+        _fillCircle.fillAmount = _holdTimer / _holdDuration;
+        if (_holdTimer >= _holdDuration)
+        {
+            // To-DO: Fix problem
+            Debug.Log(" Problem " + gameObject.name + " fixed");
+            ResetHold();
+        }
     }
 }

@@ -206,6 +206,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _holdDuration: 2
   _fillCircle: {fileID: 7762146649577117248}
+  _secondsUntilUrgent: 3
+  _secondsUntilDie: 3
   _initialWarningScale: {x: 0, y: 0}
   _urgentWarningScale: {x: 0, y: 0}
   _initialWarningColor: {r: 0.745283, g: 0.51298237, b: 0.19335175, a: 1}

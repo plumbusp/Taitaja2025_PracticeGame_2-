@@ -14,6 +14,14 @@ public class ProblemsController : MonoBehaviour
 
     private bool _busy = false;
 
+    private void Start()
+    {
+        foreach (var problem in _problems)
+        {
+            problem.OnDied += () => Debug.LogWarning("Game Over!!!");
+        }
+    }
+
     private void Update()
     {
         if(_busy)
