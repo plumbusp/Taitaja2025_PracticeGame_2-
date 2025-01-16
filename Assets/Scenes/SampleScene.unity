@@ -812,6 +812,55 @@ MonoBehaviour:
   - {fileID: 278552348}
   - {fileID: 1098560176}
   - {fileID: 1960407900}
+--- !u!1 &1784788884
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1784788886}
+  - component: {fileID: 1784788885}
+  m_Layer: 0
+  m_Name: ProblemsController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1784788885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1784788884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 551eed11884e9f6418eafe5de1f27dd3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _waitTime: 3
+  _problems:
+  - {fileID: 278552348}
+  - {fileID: 1098560176}
+  - {fileID: 1960407900}
+--- !u!4 &1784788886
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1784788884}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.9122271, y: 0.23486419, z: -0.042147577}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1960407899
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -950,3 +999,4 @@ SceneRoots:
   - {fileID: 1098560175}
   - {fileID: 1960407899}
   - {fileID: 938286856}
+  - {fileID: 1784788886}

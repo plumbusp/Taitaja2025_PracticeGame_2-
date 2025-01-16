@@ -5,7 +5,10 @@ using UnityEngine.InputSystem;
 
 public class Problem : MonoBehaviour
 {
+    public event Action<Problem> OnFixed;
+
     // Have methods to be solved
+    [Header("Hold")]
     [SerializeField] private float _holdDuration;
     [SerializeField] private Image _fillCircle;
 
@@ -14,7 +17,24 @@ public class Problem : MonoBehaviour
     private float _holdTimer = 0;
     private bool _isHolding = false;
 
+    private bool _needToBeSolved = false;
+
     private bool _active = false;
+
+    [Header("Active \"in-code animation\" parameters")]
+    [SerializeField] private Vector2 _initialWarningScale;
+    [SerializeField] private Vector2 _urgentWarningScale;
+
+    [SerializeField] private Color _initialWarningColor;
+    [SerializeField] private Color _urgentWarningColor;
+
+    private Vector2 _initialScale;
+    private Color _initialColor;
+
+    private SpriteRenderer _spriteRen;
+
+
+
     public bool Active {
         get
         {
@@ -22,10 +42,31 @@ public class Problem : MonoBehaviour
         }
         set
         {
-            if(_isHolding)
+            if (_isHolding)
                 ResetHold();
 
             _active = value;
+
+            if (_active)
+                _spriteRen.color = _initialWarningColor;
+            else
+                _spriteRen.color = _initialColor;
+        }
+    }
+
+    private bool _holdCanBeShown = false;
+    public bool HoldCanBeShown
+    {
+        get
+        {
+            return _holdCanBeShown;
+        }
+        set
+        {
+            if(_isHolding)
+                ResetHold();
+
+            _holdCanBeShown = value;
         }
     }
 
@@ -34,12 +75,18 @@ public class Problem : MonoBehaviour
         _playerInputActions = playerInputActions;
         _playerInputActions.Player.Solve.started += OnHold;
         _playerInputActions.Player.Solve.canceled += OnHold;
+        _playerInputActions.Player.Solve.performed += OnHold;
         ResetHold();
+
+        _spriteRen = GetComponent<SpriteRenderer>();
     }
 
     private void Update()
     {
         if (!Active)
+            return;
+
+        if (!HoldCanBeShown)
             return;
 
         if (_isHolding)
@@ -57,10 +104,21 @@ public class Problem : MonoBehaviour
 
     private void OnHold(InputAction.CallbackContext context)
     {
+        if (!Active)
+            return;
+
+        if (!HoldCanBeShown)
+            return;
+
         if (context.started)
             _isHolding = true;
         else if (context.canceled)
             ResetHold();
+        else if (context.performed)
+        {
+            Active = false;
+            OnFixed?.Invoke(this);
+        }
     }
     private void ResetHold()
     {

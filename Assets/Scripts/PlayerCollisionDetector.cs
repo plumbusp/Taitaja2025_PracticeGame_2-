@@ -11,16 +11,16 @@ public class PlayerCollisionDetector : MonoBehaviour
     {
         if (other.gameObject.TryGetComponent<Problem>(out Problem currentProblem))
         {
-            currentProblem.Active = true;
-            Debug.Log(currentProblem.Active);
+            currentProblem.HoldCanBeShown = true;
+            Debug.Log(currentProblem.HoldCanBeShown);
         }
     }
     private void OnTriggerExit2D(Collider2D other)
     {
         if (other.gameObject.TryGetComponent<Problem>(out Problem currentProblem))
         {
-            currentProblem.Active = false;
-            Debug.Log(currentProblem.Active);
+            currentProblem.HoldCanBeShown = false;
+            Debug.Log(currentProblem.HoldCanBeShown);
         }
     }
 }
