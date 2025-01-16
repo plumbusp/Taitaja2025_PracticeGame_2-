@@ -29,17 +29,11 @@ public class Problem : MonoBehaviour
         }
     }
 
-    public void Initlaize()
+    public void Initlaize(GameControls playerInputActions)
     {
-
-    }
-    private void Start()
-    {
-        _playerInputActions = new GameControls();
-        _playerInputActions.Player.Enable();
+        _playerInputActions = playerInputActions;
         _playerInputActions.Player.Solve.started += OnHold;
         _playerInputActions.Player.Solve.canceled += OnHold;
-
         ResetHold();
     }
 
@@ -56,6 +50,7 @@ public class Problem : MonoBehaviour
             {
                 // To-DO: Fix problem
                 Debug.Log(" Problem " + gameObject.name + " fixed");
+                ResetHold();
             }
         }
     }
