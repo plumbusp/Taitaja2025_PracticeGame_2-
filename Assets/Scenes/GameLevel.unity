@@ -636,7 +636,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1804058477797491004, guid: ef4da71833063034e860e59f1f940998, type: 3}
   m_PrefabInstance: {fileID: 8112791125836655699}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 8112791125836655700}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a94c693c785204540ac46a6437e52ca1, type: 3}
@@ -939,7 +939,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 998379400}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8112791125836655701}
+        m_TargetAssemblyTypeName: EndGameSceneController, Assembly-CSharp
+        m_MethodName: Retry
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &998379400
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1351,7 +1363,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1283225707}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8112791125836655701}
+        m_TargetAssemblyTypeName: EndGameSceneController, Assembly-CSharp
+        m_MethodName: ToMainMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1283225707
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1948,7 +1972,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1657559456}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8112791125836655701}
+        m_TargetAssemblyTypeName: EndGameSceneController, Assembly-CSharp
+        m_MethodName: ToMainMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1657559456
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2457,7 +2493,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2145846773}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8112791125836655701}
+        m_TargetAssemblyTypeName: EndGameSceneController, Assembly-CSharp
+        m_MethodName: Retry
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2145846773
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2689,8 +2737,28 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7119525462844478103, guid: ef4da71833063034e860e59f1f940998, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8112791125836655701}
   m_SourcePrefab: {fileID: 100100000, guid: ef4da71833063034e860e59f1f940998, type: 3}
+--- !u!1 &8112791125836655700 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7119525462844478103, guid: ef4da71833063034e860e59f1f940998, type: 3}
+  m_PrefabInstance: {fileID: 8112791125836655699}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8112791125836655701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8112791125836655700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e06e8c31ede422741a962c2fd80a42c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
