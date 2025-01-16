@@ -6,6 +6,7 @@ using UnityEngine;
 public class ProblemsController : MonoBehaviour
 {
     // Makes problems active at some period of time 
+    [SerializeField] EndGameScreenManager _endGameScreenManager;
     [SerializeField] private float _waitTime;
     private float _timer = 0;
 
@@ -18,7 +19,7 @@ public class ProblemsController : MonoBehaviour
     {
         foreach (var problem in _problems)
         {
-            problem.OnDied += () => Debug.LogWarning("Game Over!!!");
+            problem.OnDied += () => _endGameScreenManager.ShowDeadScreen();
         }
     }
 
