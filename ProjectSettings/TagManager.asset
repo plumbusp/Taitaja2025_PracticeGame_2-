@@ -2,7 +2,7 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!78 &1
 TagManager:
-  serializedVersion: 2
+  serializedVersion: 3
   tags: []
   layers:
   - Default
@@ -38,6 +38,23 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 1623302279
+    locked: 0
+  - name: Floor
+    uniqueID: 3194034659
+    locked: 0
+  - name: Behind character
+    uniqueID: 3675072959
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: In front of character
+    uniqueID: 176379963
+    locked: 0
+  - name: In front of character2
+    uniqueID: 4081848481
+    locked: 0
+  m_RenderingLayers:
+  - Default
