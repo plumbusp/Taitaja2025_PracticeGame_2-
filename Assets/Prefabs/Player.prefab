@@ -119,8 +119,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.7901971, y: -0.67990065, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 3174966816015922035}
   m_Father: {fileID: 0}
@@ -219,7 +219,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!70 &8560524382014200229
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -365,7 +365,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1796460029
-  m_SortingLayer: -1
+  m_SortingLayer: -3
   m_SortingOrder: 0
   m_Sprite: {fileID: 2222099721875749902, guid: b605c166140ae7b489274ad8d109036c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -451,8 +451,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1896576547
+  m_SortingLayer: -2
   m_SortingOrder: 0
   m_Sprite: {fileID: -3477862592785685085, guid: e5ff21717023f5e488804481bdf28e5f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
