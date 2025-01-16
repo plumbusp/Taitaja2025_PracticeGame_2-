@@ -9,14 +9,4 @@ public class ProblemsController : MonoBehaviour
     private bool _canSolveProblem;
 
     private List<Problem> _currentProblems = new();
-
-    private void Start()
-    {
-        _detector.OnProblemEntered += HandleNewProblem;
-    }
-
-    private void HandleNewProblem(Problem newProblem)
-    {
-        
-    }
 }
