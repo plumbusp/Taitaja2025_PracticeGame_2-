@@ -120,6 +120,7 @@ public class Problem : MonoBehaviour
         else if (context.performed)
         {
             Active = false;
+
             OnFixed?.Invoke(this);
         }
     }
