@@ -441,15 +441,15 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 317174812}
   m_CullTransparentMesh: 1
---- !u!114 &343351463 stripped
+--- !u!114 &343351466 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1987718231892659212, guid: e0cde3723d72b4941bcd19e710f867b7, type: 3}
+  m_CorrespondingSourceObject: {fileID: 8709829132572542184, guid: e0cde3723d72b4941bcd19e710f867b7, type: 3}
   m_PrefabInstance: {fileID: 1725940763}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9d04ebc0a022d7544b6d4a9cecc5b054, type: 3}
+  m_Script: {fileID: 11500000, guid: 3a187dfea8b9694409ccf79bb35e08d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &486320888
@@ -1050,6 +1050,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0dde4e6ec92b5314e95875dacb326a01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _table: {fileID: 343351466}
   _decreasingSpeed: 0.5
   _maxValue: 10
   _deadValue: 9.8
@@ -2494,7 +2495,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   problems:
-  - {fileID: 343351463}
   - {fileID: 646946389}
   - {fileID: 297233740}
   - {fileID: 1574749902}
@@ -2593,6 +2593,22 @@ PrefabInstance:
     - target: {fileID: 2956315971372397104, guid: e0cde3723d72b4941bcd19e710f867b7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2990616628128032521, guid: e0cde3723d72b4941bcd19e710f867b7, type: 3}
+      propertyPath: m_Size.x
+      value: 5.532075
+      objectReference: {fileID: 0}
+    - target: {fileID: 2990616628128032521, guid: e0cde3723d72b4941bcd19e710f867b7, type: 3}
+      propertyPath: m_Size.y
+      value: 3.6405413
+      objectReference: {fileID: 0}
+    - target: {fileID: 2990616628128032521, guid: e0cde3723d72b4941bcd19e710f867b7, type: 3}
+      propertyPath: m_Offset.x
+      value: 1.0710368
+      objectReference: {fileID: 0}
+    - target: {fileID: 2990616628128032521, guid: e0cde3723d72b4941bcd19e710f867b7, type: 3}
+      propertyPath: m_Offset.y
+      value: -1.0637361
       objectReference: {fileID: 0}
     - target: {fileID: 3715792787709274534, guid: e0cde3723d72b4941bcd19e710f867b7, type: 3}
       propertyPath: _fillCircle
@@ -2714,6 +2730,10 @@ PrefabInstance:
       propertyPath: _initialWarningColor.g
       value: 0.7028302
       objectReference: {fileID: 0}
+    - target: {fileID: 7582536832316046431, guid: e0cde3723d72b4941bcd19e710f867b7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.62
+      objectReference: {fileID: 0}
     - target: {fileID: 8472122879056778515, guid: e0cde3723d72b4941bcd19e710f867b7, type: 3}
       propertyPath: m_Name
       value: Room
@@ -2721,6 +2741,10 @@ PrefabInstance:
     - target: {fileID: 8472122879056778515, guid: e0cde3723d72b4941bcd19e710f867b7, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8709829132572542184, guid: e0cde3723d72b4941bcd19e710f867b7, type: 3}
+      propertyPath: _holdDuration
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3509,24 +3533,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8950583052606268490, guid: 3768426f9bcb0644496b76909fcad7f2, type: 3}
       propertyPath: _problems.Array.size
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8950583052606268490, guid: 3768426f9bcb0644496b76909fcad7f2, type: 3}
       propertyPath: _endGameScreenManager
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 8112791125836655703}
     - target: {fileID: 8950583052606268490, guid: 3768426f9bcb0644496b76909fcad7f2, type: 3}
       propertyPath: '_problems.Array.data[0]'
       value: 
-      objectReference: {fileID: 343351463}
+      objectReference: {fileID: 646946389}
     - target: {fileID: 8950583052606268490, guid: 3768426f9bcb0644496b76909fcad7f2, type: 3}
       propertyPath: '_problems.Array.data[1]'
       value: 
-      objectReference: {fileID: 646946389}
+      objectReference: {fileID: 297233740}
     - target: {fileID: 8950583052606268490, guid: 3768426f9bcb0644496b76909fcad7f2, type: 3}
       propertyPath: '_problems.Array.data[2]'
       value: 
-      objectReference: {fileID: 297233740}
+      objectReference: {fileID: 1574749902}
     - target: {fileID: 8950583052606268490, guid: 3768426f9bcb0644496b76909fcad7f2, type: 3}
       propertyPath: '_problems.Array.data[3]'
       value: 

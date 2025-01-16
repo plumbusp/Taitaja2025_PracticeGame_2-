@@ -3,6 +3,7 @@ using UnityEngine.UI;
 public class LonelinessMeter : MonoBehaviour
 {
     private Slider _slider;
+    [SerializeField] private Table _table;
     [SerializeField] private float _decreasingSpeed;
     [SerializeField] private float _maxValue;
     [SerializeField] private float _deadValue;
@@ -14,6 +15,8 @@ public class LonelinessMeter : MonoBehaviour
         _slider = GetComponent<Slider>();
         _slider.maxValue = _maxValue;
         _slider.value = 0;
+
+        _table.OnPerformed += DecreaseValue;
     }
     private void Update()
     {
@@ -23,7 +26,7 @@ public class LonelinessMeter : MonoBehaviour
             _endGameScreenController.ShowDeadScreen();
         }
     }
-    public void DecreaseValue()
+    private void DecreaseValue()
     {
         _slider.value = 0;
     }
