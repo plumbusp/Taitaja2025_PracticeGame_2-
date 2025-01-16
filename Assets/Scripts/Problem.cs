@@ -79,6 +79,7 @@ public class Problem : MonoBehaviour
         ResetHold();
 
         _spriteRen = GetComponent<SpriteRenderer>();
+        _initialColor = _spriteRen.color;
     }
 
     private void Update()

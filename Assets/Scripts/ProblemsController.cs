@@ -14,14 +14,6 @@ public class ProblemsController : MonoBehaviour
 
     private bool _busy = false;
 
-    private void Start()
-    {
-        Debug.Log("Current Problems List:");
-        foreach (var problem in _problems)
-        {
-            Debug.Log(problem != null ? problem.name : "Null");
-        }
-    }
     private void Update()
     {
         if(_busy)
