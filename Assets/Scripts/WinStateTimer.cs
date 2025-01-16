@@ -15,7 +15,7 @@ public class WinStateTimer : MonoBehaviour
             DisplayTime(_secUntilWin);
             return;
         }
-        _timeText.text = "00:00";
+        DisplayTime(0);
         _endGameScreenManager.ShowWinScreen();
     }
 
