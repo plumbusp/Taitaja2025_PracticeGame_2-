@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TutorialManager : MonoBehaviour
 {
@@ -72,7 +73,8 @@ public class TutorialManager : MonoBehaviour
     private void StartGame()
     {
         //add the logic/call to the method to start the actual game
-
+       
         gameObject.SetActive(false);
+        SceneManager.LoadScene("GameLevel");
     }
 }

@@ -9,6 +9,7 @@ public class MainMenuController : MonoBehaviour
     private void Start()
     {
         Time.timeScale = 1.0f;
+        AudioManager.instance.PlayAudio(MusicType.HappyMusic);
     }
     private void Update()
     {
@@ -20,7 +21,7 @@ public class MainMenuController : MonoBehaviour
 
     public void StartGame()
     {
-        SceneManager.LoadScene("GameLevel");
+        SceneManager.LoadScene("TutorialScene");
     }
 
     public void HandleSettings()
