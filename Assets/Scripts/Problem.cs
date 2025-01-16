@@ -24,6 +24,9 @@ public class Problem : MonoBehaviour
 
 
     [Header(" \"In-code animation\" parameters")]
+    [SerializeField] private Sprite _activeSprite;
+    private Sprite _initialSprite;
+
     [SerializeField] private Vector2 _initialWarningScale;
     [SerializeField] private Vector2 _urgentWarningScale;
 
@@ -31,6 +34,8 @@ public class Problem : MonoBehaviour
     [SerializeField] private Color _urgentWarningColor;
 
     private Vector2 _initialScale;
+    private float float_t;
+    private bool increasing_t;
     private Color _initialColor;
 
     private SpriteRenderer _spriteRen;
@@ -52,11 +57,13 @@ public class Problem : MonoBehaviour
             if (_active) // If set to Active
             {
                 _spriteRen.color = _initialWarningColor;
+                _spriteRen.sprite = _activeSprite;
             }
             else // If set to Unactive
             {
                 _waitTimer = 0;
                 _spriteRen.color = _initialColor;
+                _spriteRen.sprite = _initialSprite;
             }
         }
     }
@@ -88,6 +95,7 @@ public class Problem : MonoBehaviour
 
         _spriteRen = GetComponent<SpriteRenderer>();
         _initialColor = _spriteRen.color;
+        _initialSprite = _spriteRen.sprite;
     }
 
     private void Update()
@@ -154,4 +162,14 @@ public class Problem : MonoBehaviour
             ResetHold();
         }
     }
+    //private void HandleActiveAnimation()
+    //{
+    //    if (increasing_t)
+    //        float_t += Time.deltaTime;
+    //    else
+    //        float_t -= Time.deltaTime;
+
+    //    increasing_t = float_t >= 1 ? false : true;
+
+    //}
 }

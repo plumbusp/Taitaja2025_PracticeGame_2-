@@ -2056,6 +2056,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1725940764}
     - target: {fileID: 1987718231892659212, guid: e0cde3723d72b4941bcd19e710f867b7, type: 3}
+      propertyPath: _activeSprite
+      value: 
+      objectReference: {fileID: 5815151234059426975, guid: ddcd4bc639fd1ff488ccc1c33d5ecf30, type: 3}
+    - target: {fileID: 1987718231892659212, guid: e0cde3723d72b4941bcd19e710f867b7, type: 3}
       propertyPath: _secondsUntilDie
       value: 4
       objectReference: {fileID: 0}
@@ -2140,6 +2144,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1725940766}
     - target: {fileID: 3715792787709274534, guid: e0cde3723d72b4941bcd19e710f867b7, type: 3}
+      propertyPath: _activeSprite
+      value: 
+      objectReference: {fileID: 4264135665321858606, guid: 51e3c99eac5148a42abb54646f398639, type: 3}
+    - target: {fileID: 3715792787709274534, guid: e0cde3723d72b4941bcd19e710f867b7, type: 3}
       propertyPath: _secondsUntilDie
       value: 4
       objectReference: {fileID: 0}
@@ -2176,6 +2184,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1725940765}
     - target: {fileID: 6850045804175529287, guid: e0cde3723d72b4941bcd19e710f867b7, type: 3}
+      propertyPath: _activeSprite
+      value: 
+      objectReference: {fileID: 8845281175718379502, guid: 1e17f1ba2e60e7f4cb209189bd0aece2, type: 3}
+    - target: {fileID: 6850045804175529287, guid: e0cde3723d72b4941bcd19e710f867b7, type: 3}
       propertyPath: _secondsUntilDie
       value: 4
       objectReference: {fileID: 0}
@@ -2211,6 +2223,10 @@ PrefabInstance:
       propertyPath: _fillCircle
       value: 
       objectReference: {fileID: 1725940767}
+    - target: {fileID: 7576562333159940571, guid: e0cde3723d72b4941bcd19e710f867b7, type: 3}
+      propertyPath: _activeSprite
+      value: 
+      objectReference: {fileID: 2526662619516782127, guid: 3db7d0b937cc6b540940ee2705f7b5b5, type: 3}
     - target: {fileID: 7576562333159940571, guid: e0cde3723d72b4941bcd19e710f867b7, type: 3}
       propertyPath: _secondsUntilDie
       value: 4
